@@ -4,4 +4,4 @@ permit(
     action in [Action::"update", Action::"delete"],
     resource in ResourceType::"note"
        
-) when { resource.owner == principal };
+) when { resource.owner == principal.id };
