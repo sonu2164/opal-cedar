@@ -2,6 +2,6 @@
 permit(
     principal in Role::"user",
     action in [Action::"update", Action::"delete"],
-    resource in ResourceType::"note"
+    resource
        
-) when { resource.owner == principal.id };
+) when { resource.owner == principal };
