@@ -1,6 +1,6 @@
-// All users can read all resources
+
 permit(
-    principal in Role::"user",
+    principal
     action in [Action::"update", Action::"delete"],
     resource
        
