@@ -5,6 +5,6 @@ permit(
     resource in ResourceType::"note" if {
         action == Action::"create" || 
         action == Action::"read" || 
-        (action in [Action::"update", Action::"delete"] && resource.owner == principal)
+        (action in [Action::"update", Action::"delete"] && resource.owner == principal.id)
     }
 );
