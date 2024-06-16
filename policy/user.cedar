@@ -6,10 +6,3 @@ permit(
        
 ) when { resource.owner == principal.mid };
 
-// any user can read and create resource
-permit(
-    principal in Role::"user",
-    action in [Action::"read", Action::"create"],
-    resource
-    
-) ;
